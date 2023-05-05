@@ -6,18 +6,23 @@ from dotenv import load_dotenv
 readme = os.path.abspath("README.md")
 
 
-def update_meme(new_url):
-    with open(readme, "r+", encoding="utf-8") as md:
+def update_meme():
+    start, _ = comment_area()
+
+    with open(readme, "r", encoding='utf-8') as md:
         lines = md.readlines()
 
-        # Replace the src value
-        for i, line in enumerate(lines):
-            if 'alt="Reddit"' in line:
-                lines[i] = re.sub(r'src="(.+?)"', f'src="{new_url}"', line)
-                break
+    # Extract the url from meme comment block
+    url = lines.pop(start + 1).replace('\n', '')
 
-        md.seek(0)
-        md.writelines(lines)
+    # Replace the src value
+    for i, line in enumerate(lines):
+        if 'alt="Reddit"' in line:
+            lines[i] = re.sub(r'src="(.+?)"', f'src="{url}"', line)
+            break
+
+    with open(readme, 'w+', encoding='utf-8') as rd:
+        rd.writelines(lines)
 
 
 def comment_area():
@@ -51,11 +56,12 @@ def insert_urls(data):
         images.append(d + href + "\n")
 
     startline, _ = comment_area()
-    with open(readme, "r+", encoding="utf-8") as rd:
+    with open(readme, "r", encoding='utf-8') as rd:
         lines = rd.readlines()
         lines = lines[:startline+1] + images + lines[startline+1:]
-        rd.seek(0)
-        rd.writelines(lines)
+
+    with open(readme, 'w+', encoding='utf-8') as md:
+        md.writelines(lines)
 
 
 def is_urls_empty():
@@ -67,7 +73,7 @@ def fetch_memes():
     # TODO: pass argument to set the amount
 
     # I set the amount to 100 per fetch
-    url = "https://vvgskppmennronkqbstj.supabase.co/rest/v1/memes?select=*&offset=0&limit=10&order=id.asc"
+    url = "https://vvgskppmennronkqbstj.supabase.co/rest/v1/memes?select=*&offset=0&limit=100&order=id.asc"
 
     load_dotenv()
     headers = {"apikey": os.getenv("apikey")}
@@ -81,14 +87,3 @@ def fetch_memes():
         print(data)
         print('\nResponse status code: ', response.status_code)
         return None
-
-
-def extract_url():
-    start, _ = comment_area()
-    with open(readme, 'r+', encoding='utf-8') as rd:
-        lines = rd.readlines()
-        url = lines.pop(start + 1)
-        rd.seek(0)
-        rd.writelines(lines)
-
-    return url.replace("\n", '')
