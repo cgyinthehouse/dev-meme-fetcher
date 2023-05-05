@@ -5,7 +5,7 @@
 ![0b2c88dd9e](https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(6).jpgdev-memes.comb9c9dc43-717c-4d8e-83eb-f70b2c88dd9e)
 
 <!-- Syntax that able to resize images on Github's markdown -->
-[<img alt="Reddit" src="hello" width="100" />](./link/to/sql/file)
+[<img alt="Reddit" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(6).jpgdev-memes.comb9c9dc43-717c-4d8e-83eb-f70b2c88dd9e" width="100" />](./link/to/sql/file)
 
 <!--MEME
 -->
