@@ -1,0 +1,6 @@
+*test*.md
+*test*.py
+
+.env
+
+/__pycache__
