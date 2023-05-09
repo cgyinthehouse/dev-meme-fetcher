@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update meme
-        uses: cgyinthehouse/dev-memes-for-README@lastest
+        uses: cgyinthehouse/dev-memes-for-README@v1.0
         with:
           fetch_num: 50
 ```
