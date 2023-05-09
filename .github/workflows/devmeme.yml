@@ -1,7 +1,7 @@
 name: Dev Memes
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */6 * * *"
     
   push:
     branches: ["main"]
@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update meme
-        uses: cgyinthehouse/dev-memes-for-README@lastest
+        uses: cgyinthehouse/dev-memes-for-README@latest
         with:
           fetch_num: 50
