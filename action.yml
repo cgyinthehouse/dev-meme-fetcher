@@ -3,7 +3,7 @@ description: "This will fetch a list of URLs of memes and save them as a comment
 author: Kent Chen <cgyinthehouse>
 
 branding:
-  color: "yellow"
+  color: "orange"
   icon: "image"
 
 inputs:
