@@ -1,13 +1,13 @@
 ## Dev memes for README
 
-This action gets a list of dev memes images URLs to a comment block in the README.md, it will replace the image src field with the first url list in the comment block when it runs. When it comes to an empty list in the comment block, this action will get a new one.
+This action gets a list of dev meme image URLs to a comment block in the README.md, it will replace the image src field with the first url list in the comment block when it runs. When it comes to an empty list in the comment block, this action will get a new one.
 
-Just place an image tag with `alt="MEME"` in your README, you can also set the image width/height if you want to.
+Just place an `img` tag with `alt="MEME"` in your README, you can also set the width or height if you want to.
 For instance `<img alt="MEME" src="" width="350"/>`.
 
-Because the github markdown image syntax doesn't have a way to resize the image, so you have to use the `img` tag in your README.md to have github's markdown able to adjust the size.
+Because the github markdown doesn't have a way to resize the image(or there are but I just don't know), so you have to use the `img` tag in your README.md to adjust the image size.
 
-If you want to set the per fetch amount, you can set the `fetch_num`. The default is 100.
+If you want to set the amount per fetch, you can set the `fetch_num`. The default is 100.
 
 ---
 
@@ -38,11 +38,16 @@ jobs:
           fetch_num: 50
 ```
 
+### Notice
+
+Make sure you have enabled the **Read and write permissions** in the **Workflow permissions** setting of your repo to have this action work.
+Go to the repo setting and select *Actions* > *General* at the sidebar, you will see the options at the bottom section of the page.
+
 <!-- Syntax that is able to resize images on Github's markdown -->
 <img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(2).jpgdev-memes.com36551c62-6133-4b6f-aff5-b5fe1eef1689" width="300" />
 
 #### TODO
-- [ ] Automatically create meme comment block.
+- [ ] ~~Automatically create meme comment block.~~
 - [ ] Maybe set the image size from Actions?
 
 <!--MEME

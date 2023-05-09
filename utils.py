@@ -19,7 +19,7 @@ def update_meme():
 
     # Replace the src value
     for i, line in enumerate(lines):
-        if 'alt="MEME"' in line:
+        if 'alt="MEME"' in line and line.startswith("<img "):
             lines[i] = re.sub(r'src="(.+?)"', f'src="{url}"', line)
             break
 
