@@ -1,5 +1,5 @@
 name: Dev Memes for README
-description: "This will fetch a list of URLs of memes and save them as a comment block in your README.md. It will take an URL from the list and replace the image's src when it updates. If the list is empty, it will fetch a new one."
+description: "Gets a list of URLs of memes and save them as a comment block in your README.md. It will take an URL from the list and replace the src field of the img tag when it runs."
 author: Kent Chen <cgyinthehouse>
 
 branding:
