@@ -40,11 +40,12 @@ jobs:
 
 ### Notice
 
-Make sure you have enabled the **Read and write permissions** in the **Workflow permissions** setting of your repo to have this action work.
+Make sure you have enabled the "***Read and write permissions***" in the "***Workflow permissions***" setting of your repo to have this action work.
 Go to the repo setting and select *Actions* > *General* at the sidebar, you will see the options at the bottom section of the page.
 
+---
 <!-- Syntax that is able to resize images on Github's markdown -->
-<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(5).jpgdev-memes.com2c1f03f5-6d6a-4328-bdec-ab73811eecde" width="300" />
+<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(5).jpgdev-memes.com2c1f03f5-6d6a-4328-bdec-ab73811eecde" width="450" />
 
 #### TODO
 - [ ] ~~Automatically create meme comment block.~~
