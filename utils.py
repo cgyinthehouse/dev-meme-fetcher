@@ -19,7 +19,7 @@ def update_meme():
 
     # Replace the src value
     for i, line in enumerate(lines):
-        if 'alt="Reddit"' in line:
+        if 'alt="MEME"' in line:
             lines[i] = re.sub(r'src="(.+?)"', f'src="{url}"', line)
             break
 
@@ -48,6 +48,16 @@ def comment_area() -> tuple[int|None, int|None]:
     return startline, endline
 
 
+def create_comment():
+    with open(readme, 'r', encoding="utf-8") as rd:
+        lines = rd.readlines()
+    # add the comment to end line
+    lines = lines + ["<!--MEME\n", "-->\n"]
+        
+    with open(readme, "w+", encoding="utf-8") as md:
+        md.writelines(lines)
+
+            
 def insert_urls(data):
     if data is None:
         return
@@ -74,7 +84,8 @@ def is_urls_empty():
     if start and end:
         return start + 1 == end
     else:
-        raise Exception("Can't find the MEME mark in the comment")
+        create_comment()
+        return True
 
 
 def fetch_memes(limit:int|str = 100):
