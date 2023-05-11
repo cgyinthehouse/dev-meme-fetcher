@@ -5,15 +5,16 @@ This action gets a list of dev meme image URLs to a comment block in the README.
 Just place an `img` tag with `alt="MEME"` in your README, you can also set the width or height if you want to.
 For instance `<img alt="MEME" src="" width="350"/>`.
 
-Because the github markdown doesn't have a way to resize the image(or there are but I just don't know), so you have to use the `img` tag in your README.md to adjust the image size.
+Because the `![exmaple](https://exampleimage.png)` syntax doesn't have a way to resize the image on github (or there are but I just don't know), so you have to use the `img` tag in your README.md to adjust the image size.
 
-If you want to set the amount per fetch, you can set the `fetch_num`. The default is 100.
+If you want to set the amount of URLs that saved to the comment block, you can set the `fetch_num`. The default is 100.
+You can optionally change the commit author and email by setting `commit_author` and `commit_email`. This will default to *github-actions* and *github-actions@github.com*
 
 ---
 
 ## Usage
 
-Github Actions
+Example Workflow
 
 ```yaml
 name: Dev Memes
@@ -36,6 +37,8 @@ jobs:
         uses: cgyinthehouse/dev-memes-for-README@v1.0
         with:
           fetch_num: 50
+          commit_author: Kent Chen
+          commit_email: cgyinthehouse@github.com
 ```
 
 ### Notice

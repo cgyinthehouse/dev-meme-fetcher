@@ -3,31 +3,56 @@ description: "Get a dev meme in your README."
 author: Kent Chen <cgyinthehouse>
 
 branding:
-  color: "orange"
+  color: "yellow"
   icon: "image"
 
 inputs:
   fetch_num:
-    description: "the amount of URLs per fetch"
+    description: "the amount of URLs saved to the comment block"
     default: "100"
+    required: false
+
+  commit_author:
+    description: "commit author's name"
+    default: "github-actions"
+    required: false
+
+  commit_email:
+    description: "commit author's email"
+    default: "github-actions@github.com "
     required: false
 
 runs:
   using: "composite"
   steps:
+    - name: Get api key
+      id: getapikey
+      uses: actions/checkout@v3
+      with:
+        repository: cgyinthehouse/dev-memes-for-README
+        
+    - run: echo ${{ secrets.apikey }} >> $GITHUB_OUTPUT
+      shell: bash
+      
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - name: Set up python env
+      uses: actions/setup-python@v4
       with:
         cache: "pip"
         python-version: "3.10"
 
-    - run: |
+    - name: Update meme
+      env:
+        apikey: ${{ steps.getapikey.outputs }}
+      run: |
         pip install -r $GITHUB_ACTION_PATH/requirements.txt
         python $GITHUB_ACTION_PATH/main.py ${{ inputs.fetch_num }}
       shell: bash
-    - run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+
+    - name: Git operations
+      run: |
+        git config user.name ${{ inputs.commit_author }}
+        git config user.email ${{ inputs.commit_email }}
         git add .
         git commit -m "Change Meme"
         git push

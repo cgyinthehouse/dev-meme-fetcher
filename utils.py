@@ -11,11 +11,11 @@ def update_meme():
     if not start:
         return
 
-    with open(readme, "r", encoding='utf-8') as md:
+    with open(readme, "r", encoding="utf-8") as md:
         lines = md.readlines()
 
     # Extract the url from meme comment block
-    url = lines.pop(start + 1).replace('\n', '')
+    url = lines.pop(start + 1).replace("\n", "")
 
     # Replace the src value
     for i, line in enumerate(lines):
@@ -23,16 +23,16 @@ def update_meme():
             lines[i] = re.sub(r'src="(.+?)"', f'src="{url}"', line)
             break
 
-    with open(readme, 'w+', encoding='utf-8') as rd:
+    with open(readme, "w+", encoding="utf-8") as rd:
         rd.writelines(lines)
 
 
-def comment_area() -> tuple[int|None, int|None]:
+def comment_area() -> tuple[int | None, int | None]:
     with open(readme, "r", encoding="utf-8") as rd:
         lines = rd.readlines()
 
     # Find the start line of the meme comment block
-    startline, endline = None,None
+    startline, endline = None, None
     for i, line in enumerate(lines):
         if "<!--MEME" in line:
             startline = i
@@ -49,15 +49,15 @@ def comment_area() -> tuple[int|None, int|None]:
 
 
 def create_comment():
-    with open(readme, 'r', encoding="utf-8") as rd:
+    with open(readme, "r", encoding="utf-8") as rd:
         lines = rd.readlines()
     # add the comment to end line
     lines = lines + ["<!--MEME\n", "-->\n"]
-        
+
     with open(readme, "w+", encoding="utf-8") as md:
         md.writelines(lines)
 
-            
+
 def insert_urls(data):
     if data is None:
         return
@@ -70,12 +70,12 @@ def insert_urls(data):
         images.append(d + href + "\n")
 
     startline, _ = comment_area()
-    with open(readme, "r", encoding='utf-8') as rd:
+    with open(readme, "r", encoding="utf-8") as rd:
         lines = rd.readlines()
         if startline:
-            lines = lines[:startline+1] + images + lines[startline+1:]
+            lines = lines[: startline + 1] + images + lines[startline + 1 :]
 
-    with open(readme, 'w+', encoding='utf-8') as md:
+    with open(readme, "w+", encoding="utf-8") as md:
         md.writelines(lines)
 
 
@@ -88,7 +88,7 @@ def is_urls_empty():
         return True
 
 
-def fetch_memes(limit:int|str = 100):
+def fetch_memes(limit: int = 100):
     # the amount is 100 per fetch by default
     url = f"https://vvgskppmennronkqbstj.supabase.co/rest/v1/memes?select=*&offset=0&limit={limit}&order=id.asc"
 
@@ -105,5 +105,5 @@ def fetch_memes(limit:int|str = 100):
         return data
     else:
         print(data)
-        print('\nResponse status code: ', response.status_code)
+        print("\nResponse status code: ", response.status_code)
         return None

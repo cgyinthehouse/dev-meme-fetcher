@@ -5,6 +5,7 @@ limit = sys.argv[1]
 
 # Fetching and insertion is available only if the comment block is empty
 if is_urls_empty():
+    limit = int(limit)
     insert_urls(fetch_memes(limit))
 
 update_meme()
