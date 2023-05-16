@@ -1,7 +1,6 @@
 import os
 import re
 import requests
-from dotenv import load_dotenv
 
 readme = os.path.abspath("README.md")
 
@@ -89,16 +88,8 @@ def is_urls_empty():
 
 
 def fetch_memes(limit: int = 100):
-    # the amount is 100 per fetch by default
-    url = f"https://vvgskppmennronkqbstj.supabase.co/rest/v1/memes?select=*&offset=0&limit={limit}&order=id.asc"
-
-    load_dotenv()
-    if apikey := os.getenv("apikey"):
-        headers = {"apikey": apikey}
-    else:
-        raise Exception("apikey not found")
-
-    response = requests.get(url, headers=headers)
+    url = "https://sore-puce-octopus-shoe.cyclic.app/api"
+    response = requests.get(url, params = { "limit":limit })
     data = response.json()
 
     if response.status_code == 200:
