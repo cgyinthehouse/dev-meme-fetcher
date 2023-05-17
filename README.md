@@ -51,8 +51,10 @@ Go to the repo setting and select *Actions* > *General* at the sidebar, you will
 <img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(3).jpgdev-memes.comab15c291-6d7b-4896-9104-ec5ae25df55b" width="450" />
 
 #### TODO
-- [ ] ~~Automatically create meme comment block.~~
+- [x] ~~Automatically create meme comment block.~~
 - [ ] Maybe set the image size from Actions?
+- [ ] For diversity, host a meme api server or randomize the list from the api
+- [ ] Make the meme comment block optional
 
 <!--MEME
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(4).jpgdev-memes.com5a9956b0-589a-4e4d-82ae-ad0b7649d788
