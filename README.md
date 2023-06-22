@@ -48,7 +48,7 @@ Go to the repo setting and select *Actions* > *General* at the sidebar, you will
 
 ---
 <!-- Syntax that is able to resize images on Github's markdown -->
-<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(38).jpgdev-memes.comc0db5a80-b6f7-499c-b89c-0e1637e0340c" width="450" />
+<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(39).jpgdev-memes.com1b9762f1-cad8-4469-9411-c3c2ef2ae325" width="450" />
 
 #### TODO
 - [x] ~~Automatically create meme comment block.~~
@@ -57,7 +57,6 @@ Go to the repo setting and select *Actions* > *General* at the sidebar, you will
 - [ ] Make the meme comment block optional
 
 <!--MEME
-https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(39).jpgdev-memes.com1b9762f1-cad8-4469-9411-c3c2ef2ae325
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(40).jpgdev-memes.com5c72a531-a063-448c-87c9-b8d90df8f836
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(41).jpgdev-memes.comda84c1cc-47e5-40e0-b94f-d808f306cc32
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(42).jpgdev-memes.comeadc65a0-5fa4-4334-96a5-14746d696f97
