@@ -15,3 +15,5 @@ jobs:
         uses: cgyinthehouse/dev-memes-for-README@v1.0
         with:
           fetch_num: 50
+          commit_author: cgy
+          commit_email: 100090733+cgyinthehouse@users.noreply.github.com
