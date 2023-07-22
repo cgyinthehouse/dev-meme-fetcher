@@ -18,8 +18,10 @@ def update_meme():
 
     # Replace the src value
     for i, line in enumerate(lines):
-        if 'alt="MEME"' in line and line.startswith("<img "):
-            lines[i] = re.sub(r'src="(.+?)"', f'src="{url}"', line)
+        if match := re.search(r'<img\s[^>]*alt="MEME"[^>]*>', line):
+            if "src=" not in match.group():
+                line = line.replace("<img", '<img src=""')
+            lines[i] = re.sub(r'src="([^"\s]*)"', f'src="{url}"', line)
             break
 
     with open(readme, "w+", encoding="utf-8") as rd:
@@ -89,7 +91,7 @@ def is_urls_empty():
 
 def fetch_memes(limit: int = 100):
     url = "https://sore-puce-octopus-shoe.cyclic.app/api"
-    response = requests.get(url, params = { "limit":limit })
+    response = requests.get(url, params={"limit": limit})
     data = response.json()
 
     if response.status_code == 200:
