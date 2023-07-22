@@ -34,8 +34,8 @@ runs:
 
     - name: Update meme
       run: |
-        pip install -r $GITHUB_ACTION_PATH/requirements.txt
-        python $GITHUB_ACTION_PATH/main.py ${{ inputs.fetch_num }}
+        pip install -r ${{ github.action_path }}/requirements.txt
+        python ${{ github.action_path }}/main.py ${{ inputs.fetch_num }}
       shell: bash
 
     - name: Git operations
