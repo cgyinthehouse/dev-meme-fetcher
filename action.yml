@@ -29,13 +29,12 @@ runs:
     - name: Set up python env
       uses: actions/setup-python@v4
       with:
-        cache: "pip"
         python-version: "3.10"
 
     - name: Update meme
       run: |
-        pip install -r ${{ github.workspace }}/requirements.txt
-        python ${{ github.workspace }}/main.py ${{ inputs.fetch_num }}
+        pip install -r $GITHUB_ACTION_PATH/requirements.txt
+        python $GITHUB_ACTION_PATH/main.py ${{ inputs.fetch_num }}
       shell: bash
 
     - name: Git operations
