@@ -3,7 +3,7 @@
 This action gets a list of dev meme image URLs to a comment block in the README.md, it will replace the image src field with the first url list in the comment block when it runs. When it comes to an empty list in the comment block, this action will get a new one.
 
 Just place an `img` tag with `alt="MEME"` in your README, you can also set the width or height if you want to.
-For instance `<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(19).jpgdev-memes.comcf5135c1-2ed0-4b25-ba01-a7c5caf52473" width="350"/>`.
+For instance `<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(20).jpgdev-memes.com74df42da-fd62-4023-979f-019b87daa522" width="350"/>`.
 
 Because the `![exmaple](https://exampleimage.png)` syntax doesn't have a way to resize the image on github (or there are but I just don't know), so you have to use the `img` tag in your README.md to adjust the image size.
 
@@ -57,7 +57,6 @@ Go to the repo setting and select *Actions* > *General* at the sidebar, you will
 - [ ] Make the meme comment block optional
 
 <!--MEME
-https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(20).jpgdev-memes.com74df42da-fd62-4023-979f-019b87daa522
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(1).jpgdev-memes.com34e1c4d8-e528-452e-b7d5-f419b52b1270
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(21).jpgdev-memes.comb36e4b4a-8cd8-4f56-a071-82b99f1c7922
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(22).jpgdev-memes.comeae32c18-54a8-4751-ae50-06d9acd453e9
