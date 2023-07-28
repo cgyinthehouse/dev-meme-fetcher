@@ -1,20 +1,22 @@
 ## Dev memes for README
 
+<!-- Syntax that is able to resize images on Github's markdown -->
+<p align="center"><img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(18).jpgdev-memes.comc92a946c-a9f5-49c1-9a38-3844966df9e1" width="30%" /></p>
+
 This action gets a list of dev meme image URLs to a comment block in the README.md, it will replace the image src field with the first url list in the comment block when it runs. When it comes to an empty list in the comment block, this action will get a new one.
-
-Just place an `img` tag with `alt="MEME"` in your README, you can also set the width or height if you want to.
-For instance `<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(24).jpgdev-memes.com4622c055-215b-414b-8a6c-731723fd629e" width="350"/>`.
-
-Because the `![exmaple](https://exampleimage.png)` syntax doesn't have a way to resize the image on github (or there are but I just don't know), so you have to use the `img` tag in your README.md to adjust the image size.
-
-If you want to set the amount of URLs that saved to the comment block, you can set the `fetch_num`. The default is 100.
-You can optionally change the commit author and email by setting `commit_author` and `commit_email`. This will default to *github-actions* and *github-actions@github.com*
 
 ---
 
 ## Usage
 
-Example Workflow
+Just place an `img` tag with `alt="MEME"` in your README, for example `<img alt="MEME" />`, you can also set the width or height if you want to.
+
+If you want to set the amount of URLs that saved to the comment block, you can set the `fetch_num`. The default is 100.
+You can optionally set the commit author and email with `commit_author` and `commit_email`.
+
+**(NOTICE‼️)** In order to let this action modify the README, make sure you have enabled the "***Read and write permissions***" under the "***Workflow permissions***" in your repository settings.
+
+### Example Workflow
 
 ```yaml
 name: Dev Memes
@@ -37,18 +39,13 @@ jobs:
         uses: cgyinthehouse/dev-memes-for-README@v1.0
         with:
           fetch_num: 50
-          commit_author: Kent Chen
-          commit_email: cgyinthehouse@github.com
+          commit_author: Mike Oxlong
+          commit_email: mikeoxlong@users.noreply.github.com
 ```
 
-### Notice
 
-Make sure you have enabled the "***Read and write permissions***" in the "***Workflow permissions***" setting of your repo to have this action work.
-Go to the repo setting and select *Actions* > *General* at the sidebar, you will see the options at the bottom section of the page.
 
 ---
-<!-- Syntax that is able to resize images on Github's markdown -->
-<img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(18).jpgdev-memes.comc92a946c-a9f5-49c1-9a38-3844966df9e1" width="450" />
 
 #### TODO
 - [x] ~~Automatically create meme comment block.~~
