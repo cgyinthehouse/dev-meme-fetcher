@@ -1,7 +1,7 @@
 ## Dev memes for README
 
 <!-- Syntax that is able to resize images on Github's markdown -->
-<p align="center"><img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(21).jpgdev-memes.comb36e4b4a-8cd8-4f56-a071-82b99f1c7922" width="30%" /></p>
+<p align="center"><img alt="MEME" src="https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(22).jpgdev-memes.comeae32c18-54a8-4751-ae50-06d9acd453e9" width="30%" /></p>
 
 This action gets a list of dev meme image URLs to a comment block in the README.md, it will replace the image src field with the first url list in the comment block when it runs. When it comes to an empty list in the comment block, this action will get a new one.
 
@@ -54,7 +54,6 @@ jobs:
 - [ ] Make the meme comment block optional
 
 <!--MEME
-https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(22).jpgdev-memes.comeae32c18-54a8-4751-ae50-06d9acd453e9
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(23).jpgdev-memes.come7bea1c2-e3c0-4d6e-aa04-6f84f728a721
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(24).jpgdev-memes.com4622c055-215b-414b-8a6c-731723fd629e
 https://vvgskppmennronkqbstj.supabase.co/storage/v1/object/public/memes/38e49d24-a90a-4cf9-9825-602a6c3e1bb7/dev-memes%20(25).jpgdev-memes.come34fe7a1-a8ca-423d-8e43-7549944c8c2d
